@@ -35,8 +35,40 @@ function dogBreeds(breeds) {
         // li.setAttribute('type', button);
         li.type = 'button';
         li.setAttribute('id', `${breed}`);
+        const tempArr = breed.split('');
 
+        li.setAttribute('tag', tempArr[0]);
+        li.addEventListener('click', (e) => {
+                e.target.style.color = 'red';          
+        });
+        
         document.querySelector('ul').appendChild(li);
-    })
-}
 
+        breedFilter(breed);
+    });
+};
+
+function breedFilter(breed) {
+    // console.log(breed);
+    let dogBreeds = document.getElementById(breed);
+    let dogTag = dogBreeds.getAttribute('tag');
+
+    let dropDown = document.querySelector('select');
+    console.log(dropDown.options.value);
+
+    // console.log(dogTag);
+    // console.log(dropDown.length);
+
+    // for (i=0; i < dropDown.length; i++) {
+    //     let letter = dropDown[i].value;
+    
+        // console.log(letter);
+        //  if (dogTag !== 'a') {
+        //     let options = document.createElement('option');
+        //     options.value = dogTag;
+        //     options.innerText = dogTag;
+        //     document.querySelector('select').appendChild(options);
+        // }
+    // };  
+   
+};
