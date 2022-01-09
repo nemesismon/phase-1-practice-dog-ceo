@@ -52,23 +52,18 @@ function breedFilter(breed) {
     // console.log(breed);
     let dogBreeds = document.getElementById(breed);
     let dogTag = dogBreeds.getAttribute('tag');
-
-    let dropDown = document.querySelector('select');
-    console.log(dropDown.options.value);
-
-    // console.log(dogTag);
-    // console.log(dropDown.length);
-
-    // for (i=0; i < dropDown.length; i++) {
-    //     let letter = dropDown[i].value;
     
-        // console.log(letter);
-        //  if (dogTag !== 'a') {
-        //     let options = document.createElement('option');
-        //     options.value = dogTag;
-        //     options.innerText = dogTag;
-        //     document.querySelector('select').appendChild(options);
-        // }
-    // };  
-   
+    let dropDown = document.querySelectorAll('option');
+    // console.log(dropDown[0].value);
+    dropDown.forEach.value(element => {
+    
+    console.log(element);
+    if (dogTag !== element) {
+        
+                let options = document.createElement('option');
+                options.value = dogTag;
+                options.innerText = dogTag;
+                document.querySelector('select').appendChild(options);
+    };
+    })
 };
